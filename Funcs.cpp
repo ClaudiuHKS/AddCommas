@@ -114,6 +114,9 @@
     if ( ( ( P = ( static_cast < decltype ( P ) > ( T.find ( '.' ) ) ) ) >= 0UI64 ) && ( P < L ) )
         C.assign ( &( T [ P ] ) ), T.erase ( P ), L = ( static_cast < decltype ( L ) > ( T.length ( ) ) );
 
+    else if ( ( ( P = ( static_cast < decltype ( P ) > ( T.find ( ',' ) ) ) ) >= 0UI64 ) && ( P < L ) )
+        T [ P ] = '.', C.assign ( &( T [ P ] ) ), T.erase ( P ), L = ( static_cast < decltype ( L ) > ( T.length ( ) ) );
+
     else
         C.clear ( );
 
@@ -262,6 +265,9 @@
 
     if ( ( ( P = ( static_cast < decltype ( P ) > ( T.find ( L'.' ) ) ) ) >= 0UI64 ) && ( P < L ) )
         C.assign ( &( T [ P ] ) ), T.erase ( P ), L = ( static_cast < decltype ( L ) > ( T.length ( ) ) );
+
+    else if ( ( ( P = ( static_cast < decltype ( P ) > ( T.find ( L',' ) ) ) ) >= 0UI64 ) && ( P < L ) )
+        T [ P ] = L'.', C.assign ( &( T [ P ] ) ), T.erase ( P ), L = ( static_cast < decltype ( L ) > ( T.length ( ) ) );
 
     else
         C.clear ( );
