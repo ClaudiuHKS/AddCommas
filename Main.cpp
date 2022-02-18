@@ -90,7 +90,7 @@ const int __cdecl wmain ( long long, wchar_t **, wchar_t **, ... ) noexcept
     return 0I32;
 }
 
-/**
+/*
 -9,999,999,999
 -999,999,999
 -99,999,999
