@@ -3,7 +3,7 @@
 
 #include    "Funcs.h"
 
-const int __cdecl wmain ( long long, wchar_t **, wchar_t **, ... ) noexcept
+int __cdecl wmain ( void ) noexcept
 {
     long long S [ ]
     {
@@ -72,17 +72,17 @@ const int __cdecl wmain ( long long, wchar_t **, wchar_t **, ... ) noexcept
         9999999999.9L,
     };
 
-    for ( auto V : S )
+    for ( auto & V : S )
         ::std::wcout << ::AddCommasW ( V ) << ::std::endl;
 
     ::std::wcout << ::std::endl;
 
-    for ( auto V : U )
+    for ( auto & V : U )
         ::std::wcout << ::AddCommasW ( V ) << ::std::endl;
 
     ::std::wcout << ::std::endl;
 
-    for ( auto V : R )
+    for ( auto & V : R )
         ::std::wcout << ::AddCommasW ( V ) << ::std::endl;
 
     ::std::wcout << ::std::endl;
