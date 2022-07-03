@@ -3,8 +3,12 @@
 
 #include    "Funcs.h"
 
+#include    < windows.h >
+
 int __cdecl wmain ( void ) noexcept
 {
+    ::Sleep ( 8192 );
+
     long long S [ ]
     {
         -9999999999I64,
