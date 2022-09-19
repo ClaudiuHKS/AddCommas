@@ -1,96 +1,17 @@
 
-#include    < iostream >
+#include <iostream>
+#include "Funcs.h"
+#include <windows.h>
 
-#include    "Funcs.h"
-
-#include    < windows.h >
-
-int __cdecl wmain ( void ) noexcept
-{
-    ::Sleep ( 8192 );
-
-    long long S [ ]
-    {
-        -9999999999I64,
-        -999999999I64,
-        -99999999I64,
-        -9999999I64,
-        -999999I64,
-        -99999I64,
-        -9999I64,
-        -999I64,
-        -99I64,
-        -9I64,
-        0I64,
-        9I64,
-        99I64,
-        999I64,
-        9999I64,
-        99999I64,
-        999999I64,
-        9999999I64,
-        99999999I64,
-        999999999I64,
-        9999999999I64,
-    };
-
-    unsigned long long U [ ]
-    {
-        0UI64,
-        9UI64,
-        99UI64,
-        999UI64,
-        9999UI64,
-        99999UI64,
-        999999UI64,
-        9999999UI64,
-        99999999UI64,
-        999999999UI64,
-        9999999999UI64,
-    };
-
-    long double R [ ]
-    {
-        -9999999999.9L,
-        -999999999.9L,
-        -99999999.9L,
-        -9999999.9L,
-        -999999.9L,
-        -99999.9L,
-        -9999.9L,
-        -999.9L,
-        -99.9L,
-        -9.9L,
-        -.9L,
-        0.L,
-        .9L,
-        9.9L,
-        99.9L,
-        999.9L,
-        9999.9L,
-        99999.9L,
-        999999.9L,
-        9999999.9L,
-        99999999.9L,
-        999999999.9L,
-        9999999999.9L,
-    };
-
-    for ( auto & V : S )
-        ::std::wcout << ::AddCommasW ( V ) << ::std::endl;
-
-    ::std::wcout << ::std::endl;
-
-    for ( auto & V : U )
-        ::std::wcout << ::AddCommasW ( V ) << ::std::endl;
-
-    ::std::wcout << ::std::endl;
-
-    for ( auto & V : R )
-        ::std::wcout << ::AddCommasW ( V ) << ::std::endl;
-
-    ::std::wcout << ::std::endl;
-
+int __cdecl wmain() noexcept {
+    ::Sleep(8192UL); long long S[]{ -9999999999I64, -999999999I64, -99999999I64, -9999999I64, -999999I64, -99999I64, -9999I64, -999I64, -99I64, -9I64,
+        0I64, 9I64, 99I64, 999I64, 9999I64, 99999I64, 999999I64, 9999999I64, 99999999I64, 999999999I64, 9999999999I64,
+    }; unsigned long long U[]{ 0UI64, 9UI64, 99UI64, 999UI64, 9999UI64, 99999UI64, 999999UI64, 9999999UI64, 99999999UI64, 999999999UI64, 9999999999UI64,
+    }; long double R[]{ -9999999999.9L, -999999999.9L, -99999999.9L, -9999999.9L, -999999.9L, -99999.9L, -9999.9L, -999.9L, -99.9L, -9.9L, -.9L,
+        0.L, .9L, 9.9L, 99.9L, 999.9L, 9999.9L, 99999.9L, 999999.9L, 9999999.9L, 99999999.9L, 999999999.9L, 9999999999.9L,
+    }; for (auto& V : S) ::std::wcout << ::AddCommasW(V) << ::std::endl << ::std::endl;
+    for (auto& V : U) ::std::wcout << ::AddCommasW(V) << ::std::endl << ::std::endl;
+    for (auto& V : R) ::std::wcout << ::AddCommasW(V) << ::std::endl << ::std::endl;
     return 0I32;
 }
 
